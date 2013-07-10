@@ -19,7 +19,9 @@ var app = http.createServer(function (req, res) {
       .root(__dirname)
       .on('error', error)
       .on('directory', redirect)
-      .pipe(res);
+      .pipe(res, function () {
+           console.log('piping');
+      });
 });
 
 app.listen(3333);
