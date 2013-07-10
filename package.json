@@ -7,10 +7,12 @@
     "send": "latest"
   },
   "devDependencies": {},
+  "bin" : {"simple-static" : "server.js"},
   "scripts": {
     "test": "node server.js",
     "start": "node server.js"
   },
+  "directories": [ "js", "img", "css" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nikmartin/simple-static.git"

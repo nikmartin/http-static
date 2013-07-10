@@ -6,6 +6,15 @@ includes, etc.  It doesn't have any required config settings.  Just install it, 
 serves files out of the directory it is running in, and any files and folders that are included 
 underneath.
 
+Install
+-------
+Simple Static runs as as executable, so installing with -g is the preferred method:
+`npm install -g simple-static`
+
+Run
+---
+Run simple-static from whatever directory you are in, and it will serve files from that directory as the root. `simple-static`. simple-static is now serving files from the localdirectory on port 3333: http://localhost:3333/
+
 License
 --------
 Copyright (c) 2013 Nik Martin

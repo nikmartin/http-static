@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var http = require('http'),
     send = require('send'),
@@ -17,7 +18,7 @@ var app = http.createServer(function (req, res) {
    }
 
    send(req, url.parse(req.url).pathname)
-      .root(__dirname)
+      .root(process.cwd())
       .on('error', error)
       .on('directory', redirect)
       .pipe(res);
