@@ -4,6 +4,7 @@ var http = require('http'),
     url = require('url');
 
 var app = http.createServer(function (req, res) {
+   console.log('Request: %s', req.url);
    function error(err) {
       res.statusCode = err.status || 500;
       res.end(err.message);
@@ -19,9 +20,7 @@ var app = http.createServer(function (req, res) {
       .root(__dirname)
       .on('error', error)
       .on('directory', redirect)
-      .pipe(res, function () {
-           console.log('piping');
-      });
+      .pipe(res);
 });
 
 app.listen(3333);
