@@ -1,0 +1,28 @@
+{
+  "name": "simple-static",
+  "version": "0.0.1",
+  "description": "Simple Static is a tiny web server for testing static web pages. It is designed around testing and developing single page web apps, like with backbone, ember, angular etc. ",
+  "main": "server.js",
+  "dependencies": {
+    "send": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikmartin/simple-static.git"
+  },
+  "keywords": [
+    "static",
+    "web server",
+    "single page apps"
+  ],
+  "author": "Nik Martin",
+  "license": "JSON",
+  "bugs": {
+    "url": "https://github.com/nikmartin/simple-static/issues"
+  }
+}
