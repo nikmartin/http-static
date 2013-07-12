@@ -1,7 +1,7 @@
 {
-  "name": "simple-static",
-  "version": "0.0.1",
-  "description": "Simple Static is a tiny web server for testing static web pages. It is designed around testing and developing single page web apps, like with backbone, ember, angular etc. ",
+  "name": "http-static",
+  "version": "0.0.2",
+  "description": "Simple Static is a tiny web server for testing static web pages. It is designed around testing and developing single page client side web apps, like with backbone, ember, angular etc.",
   "main": "server.js",
   "dependencies": {
     "send": "latest"
