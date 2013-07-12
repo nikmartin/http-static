@@ -24,5 +24,7 @@ var app = http.createServer(function (req, res) {
       .pipe(res);
 });
 
-app.listen(3333);
+app.listen(3333, function() {
+   console.log('Simple-Static Listening on port 3333');
+});
 
