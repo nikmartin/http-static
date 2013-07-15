@@ -5,9 +5,9 @@ var http = require('http'),
     url = require('url');
 
 var app = http.createServer(function (req, res) {
-   console.log('Request: %s', req.url);
    function error(err) {
       res.statusCode = err.status || 500;
+      console.log('%s:  %s', err.status, req.url);
       res.end(err.message);
    }
 
@@ -22,6 +22,7 @@ var app = http.createServer(function (req, res) {
       .on('error', error)
       .on('directory', redirect)
       .pipe(res);
+   console.log('%s', req.url);
 });
 
 var port = process.argv[2] || 3333;
