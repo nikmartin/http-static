@@ -24,7 +24,22 @@ var app = http.createServer(function (req, res) {
       .pipe(res);
 });
 
-app.listen(3333, function() {
-   console.log('Simple-Static Listening on port 3333');
+var port = process.argv[2] || 3333;
+
+console.log('Simple-Static Listening on port %s', port);
+
+app.on('error', function (e) {
+   if (e.code === 'EADDRINUSE') {
+      console.log('Address in use, incrementing and retrying...');
+      setTimeout(function () {
+//         app.close();
+         port++;
+         app.listen(port, function () {
+            console.log('Simple-Static Listening on port %s', port);
+         });
+      }, 1000);
+   }
 });
+
+app.listen(port);
 
