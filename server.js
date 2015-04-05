@@ -31,7 +31,7 @@ var app = http.createServer(function(req, res) {
 
 var port = process.argv[2] || 3333;
 
-console.log('Simple-Static Listening on port %s', port);
+console.log('HTTP Static Listening on port %s', port);
 
 app.on('error', function(e) {
    if (e.code === 'EADDRINUSE') {
@@ -40,7 +40,7 @@ app.on('error', function(e) {
          //         app.close();
          port++;
          app.listen(port, function() {
-            console.log('Simple-Static Listening on port %s', port);
+            console.log('HTTP Static Listening on port %s', port);
          });
       }, 1000);
    }
