@@ -8,9 +8,9 @@ underneath.
 
 Install
 -------
-Simple Static runs as as executable, so installing with -g is the preferred method:
-`npm install -g simple-static`
+HTTP Static runs as as executable, so installing with -g is the preferred method:
+`npm install -g http-static`
 
 Run
 ---
-Run simple-static from whatever directory you are in, and it will serve files from that directory as the root. `simple-static`. simple-static is now serving files from the localdirectory on port 3333: http://localhost:3333/
+Run http-static from whatever directory you are in, and it will serve files from that directory as the root. `http-static`. http-static is now serving files from the localdirectory on port 3333: http://localhost:3333/
