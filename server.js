@@ -2,10 +2,17 @@
 
 "use strict";
 var http = require('http'),
+    https = require('https'),
    send = require('send'),
+   fs = require('fs'),
    url = require('url');
+   
+   const options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/portacode.win/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/portacode.win/fullchain.pem')
+};
 
-var app = http.createServer(function(req, res) {
+var app = https.createServer(options, function(req, res) {
    function error(err) {
       res.statusCode = err.status || 500;
       console.log('%s: %s', err.status, req.url);

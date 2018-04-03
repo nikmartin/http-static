@@ -1,18 +1,24 @@
 {
   "name": "http-static",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "HTTP Static is a tiny web server for testing static web pages. It is designed around testing and developing single page client side web apps, like with backbone, ember, angular etc.",
   "main": "server.js",
   "dependencies": {
-    "send": "0.12.2"
+    "send": "^0.16.2"
   },
   "devDependencies": {},
-  "bin" : {"http-static" : "server.js"},
+  "bin": {
+    "http-static": "server.js"
+  },
   "scripts": {
     "test": "node server.js",
     "start": "node server.js"
   },
-  "directories": [ "js", "img", "css" ],
+  "directories": [
+    "js",
+    "img",
+    "css"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/nikmartin/http-static.git"
